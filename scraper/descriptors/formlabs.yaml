@@ -1,0 +1,45 @@
+site: formlabs
+base_url: "https://formlabs.com/products/"
+output_prefix: "08_formlabs_products"
+
+schema_fields:
+  - product_name
+  - category
+  - price
+  - product_url
+  - source_url
+  - product_details
+  - specifications
+
+instructions: |
+  You are extracting product data from the Formlabs online website.
+
+  NAVIGATION:
+  Visit each category listing page:
+    - 3D Printers   → https://formlabs.com/products/3d-printers/
+    - Materials   → https://formlabs.com/products/materials/
+    - Post-Processing   → https://formlabs.com/products/post-processing/
+    - Accessories   → https://formlabs.com/products/accessories/
+    - Parts   → https://formlabs.com/products/parts/
+    - Deals and Factory Reconditioned   → https://formlabs.com/products/refurbished-3d-printers/
+
+  For each category:
+  1. Accept cookie / overlay if shown.
+  2. For each product link whose path matches /store/<category-slug>/<product-slug>/:
+     - Click the link to open the product detail page (PDP).
+
+  EXTRACTION (on each PDP):
+  - product_name: The page h1 or product title.
+  - category: The category label used to navigate here.
+  - price: The dollar price shown (e.g. "$3,499"). Null if not shown.
+  - product_url: Current page URL.
+  - source_url: The listing page URL.
+  - product_details: Look for a "Product Description" accordion/section and
+    extract its text. If absent, look for a "learn more" button.
+    Return the text content (null if neither section is found).
+  - specifications: Any structured key-value specs visible on the page.
+
+  IMPORTANT:
+  - Skip links that end at the category level (e.g. /store/3d-printers/ itself).
+  - Skip products with $0 price or no detectable price.
+  - Return a JSON array, one object per product.

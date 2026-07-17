@@ -1,0 +1,46 @@
+site: ultimaker
+base_url: "https://ultimaker.com/"
+output_prefix: "05_ultimaker_products"
+
+schema_fields:
+  - product_name
+  - category
+  - price
+  - product_url
+  - specifications
+  - specs
+
+instructions: |
+  You are extracting product data from the Ultimaker (UltiMaker) website.
+
+  NAVIGATION:
+  1. Go to base_url and accept cookies.
+  2. Scroll to the footer and find links to product pages under these series:
+       - Factor series printers → URLs matching /3d-printers/factor-series/<slug>/
+       - S series       → URLs matching /3d-printers/s-series/<slug>/
+       - Method series printers  → URLs matching /3d-printers/method-series/<slug>/
+  3. Click in each button "learn more", a new page will open, collect the product URLs.
+  4. In the product page scroll down and find the "specs" tab.
+  5. Collect all the data below "specs" term.
+
+  EXTRACTION (on each product page):
+  - product_name: The h1 heading that contains "UltiMaker" or "Ultimaker",
+    shorter than 40 characters. Fall back to the page title if not found.
+  - category: The series label inferred from the URL:
+      "factor-series" → "Factor series printers"
+      "s-series"      → "S series printers"
+      "method-series" → "Method series printers"
+  - product_url: Current page URL.
+  - specifications: {} (use the structured `specs` field instead)
+  - specs: Click the "Specs" tab (role="tab", name="Specs"). Then scroll
+    down to load the full specs table. Extract the three-column table as
+    a JSON array of objects, each with:
+      { "spec_name": "Dimensions", "type": "Build volume", "spec_value": "330 x 240 x 300 mm" }
+    The first column is the section heading (carry it forward when subsequent
+    rows have only two columns). The second column is the spec type.
+    The third column is the value.
+
+  IMPORTANT:
+  - Only extract rows that contain a numeric value or unit (mm, °C, kg, W, etc.).
+  - Return null for price if not shown.
+  - Return a JSON array, one object per product.

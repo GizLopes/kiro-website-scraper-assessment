@@ -1,0 +1,58 @@
+site: active_floor
+base_url: "https://activefloor.com/interactive-spaces/"
+output_prefix: "01_activefloor_products"
+
+# Fields the LLM must try to extract for every product.
+# Use exactly these key names in the JSON output.
+schema_fields:
+  - product_name
+  - category
+  - price
+  - product_url
+  - specifications
+  - height_metric
+  - height_imperial
+  - width_metric
+  - width_imperial
+  - weight_metric
+  - weight_imperial
+  - vinyl_size
+  - projector
+  - brightness
+
+# Navigation and extraction instructions for the LLM agent.
+instructions: |
+  You are extracting product data from the ActiveFloor interactive spaces page.
+
+  NAVIGATION:
+  1. Go to the base_url.
+  2. Close any cookie consent banner by clicking "Ok" or "Accept".
+  3. The page has category tabs: Floor, Wall, Table. Click each tab in turn.
+  4. For each tab, find all "See Details" buttons and click each one to open
+     the product modal.
+  5. After you enter in "see details" click in the button "See Dataset" to open a pdf
+     about the product specifications distributed in different technical terms.
+  6. Return to the base_url and check in order the products position in each tabs
+     to collect the data specs continuous the step 3 and the next items.
+
+  EXTRACTION (inside each modal):
+  - product_name: The product title shown at the top of the modal.
+  - category: The tab you are currently on (Floor / Wall / Table).
+  - price: Any price shown (may be absent — set null if not found).
+  - product_url: The canonical URL of this product if a "Learn more" or
+    similar link exists; otherwise use the current page URL.
+  - specifications: Collect ALL key-value pairs visible in the specs or
+    dimensions section as a JSON object.
+  - height_metric / height_imperial: Height values from the Dimensions
+    section (e.g. "60 cm" and '24"').
+  - width_metric / width_imperial: Width values similarly.
+  - weight_metric / weight_imperial: Weight values similarly.
+  - vinyl_size: Vinyl or projection surface dimensions if shown.
+  - projector: Projector model or specification if shown.
+  - brightness: Brightness in lumens if shown.
+
+  IMPORTANT:
+  - If a field is not present, output null for that key — do NOT skip the key.
+  - Close the modal before moving to the next product.
+  - After finishing all products in a tab, click the next tab.
+  - Return a JSON array where each element is one product object.

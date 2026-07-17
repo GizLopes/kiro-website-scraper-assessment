@@ -1,0 +1,47 @@
+site: makerbot
+base_url: "https://www.makerbot.com/"
+output_prefix: "06_makerbot_products"
+
+schema_fields:
+  - product_name
+  - category
+  - price
+  - price_current
+  - product_url
+  - source_url
+  - specifications
+
+instructions: |
+  You are extracting product data from the MakerBot store.
+  MakerBot products are sold through store.ultimaker.com.
+
+  NAVIGATION:
+  Visit each of these category listing pages:
+    - 3D Printers   → https://store.ultimaker.com/3d-printers
+    - Materials   → https://store.ultimaker.com/3d-printer-materials
+    - Extruders   → https://store.ultimaker.com/3d-printer-extruders-and-print-cores
+    - Parts & Accessories   → https://store.ultimaker.com/accessories
+
+  For each category page:
+  1. Accept cookies / overlays if shown.
+  2. Wait for the product grid (li.product-item elements) to load.
+  3. Scroll until no new products appear.
+  4. For each product item, click it to open the product
+     detail page (PDP) and search by "printer" or "sketch" terms.
+
+  EXTRACTION (on each PDP):
+  - product_name: The h1 page title.
+  - category: The category label used to navigate here
+    (e.g. "3D Printers", "Materials").
+  - price: The displayed price. If there are two prices (original and sale),
+    capture both separated by " → " (e.g. "$2,499 → $1,999").
+  - price_current: The current / final price only (the lower number if on sale).
+  - product_url: Current page URL.
+  - source_url: The listing URL you navigated from.
+  - specifications: Any key-value specs shown on the page as a JSON object in the terms like
+    "printer", "student certification", "educator certification", "material", and "build volume".
+
+  IMPORTANT:
+  - Skip items whose URL path ends with a category-level slug.
+  - Skip products with price $0 or where no price is detectable.
+  - Return a JSON array, one object per product.

@@ -1,0 +1,39 @@
+[
+  {
+    "product_name": "ActiveFloor Floor 55",
+    "category": "Floor",
+    "price": null,
+    "product_url": "https://activefloor.com/interactive-spaces/",
+    "source_url": "https://activefloor.com/interactive-spaces/",
+    "specifications": {
+      "Projector": "Short throw",
+      "Brightness": "3000 lm"
+    },
+    "height_metric": "60 cm",
+    "height_imperial": "23.6\"",
+    "width_metric": "100 cm",
+    "width_imperial": "39.4\"",
+    "weight_metric": "25 kg",
+    "weight_imperial": "55 lbs",
+    "vinyl_size": "120 x 90 cm",
+    "projector": "Epson EB-680",
+    "brightness": "3000 lm"
+  },
+  {
+    "product_name": "ActiveFloor Wall 65",
+    "category": "Wall",
+    "price": null,
+    "product_url": "https://activefloor.com/interactive-spaces/",
+    "source_url": "https://activefloor.com/interactive-spaces/",
+    "specifications": {},
+    "height_metric": "150 cm",
+    "height_imperial": "59\"",
+    "width_metric": "90 cm",
+    "width_imperial": "35.4\"",
+    "weight_metric": "30 kg",
+    "weight_imperial": "66 lbs",
+    "vinyl_size": null,
+    "projector": null,
+    "brightness": null
+  }
+]

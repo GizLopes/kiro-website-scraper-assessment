@@ -1,0 +1,67 @@
+[
+  {
+    "product_name": "Form 4",
+    "category": "3D Printers",
+    "price": "$4,999",
+    "product_url": "https://formlabs.com/products/3d-printers/form-4/",
+    "source_url": "https://formlabs.com/products/3d-printers/",
+    "product_details": "The fastest, most reliable desktop 3D printer Formlabs has ever built. Low Force Display™ technology delivers breakthrough speed and precision.",
+    "specifications": {
+      "Build Volume": "19.5 × 12.5 × 21.0 cm",
+      "Layer Thickness": "25–300 µm",
+      "XY Resolution": "50 µm",
+      "Print Speed": "Up to 100 mm/hr"
+    }
+  },
+  {
+    "product_name": "Form 4L",
+    "category": "3D Printers",
+    "price": "$9,999",
+    "product_url": "https://formlabs.com/products/3d-printers/form-4l/",
+    "source_url": "https://formlabs.com/products/3d-printers/",
+    "product_details": "Large-format desktop 3D printer based on Low Force Display™ technology. Ideal for large parts or high-volume batch printing.",
+    "specifications": {
+      "Build Volume": "40.0 × 25.0 × 33.0 cm",
+      "Layer Thickness": "25–300 µm",
+      "XY Resolution": "50 µm"
+    }
+  },
+  {
+    "product_name": "Standard Grey Resin (1 L)",
+    "category": "Materials",
+    "price": "$149",
+    "product_url": "https://formlabs.com/products/materials/standard-grey-resin/",
+    "source_url": "https://formlabs.com/products/materials/",
+    "product_details": "General-purpose photopolymer resin for concept models, prototypes, and fixtures.",
+    "specifications": {
+      "Volume": "1 L",
+      "Compatible Printers": "Form 2, Form 3, Form 3+, Form 4",
+      "Shore Hardness": "83D"
+    }
+  },
+  {
+    "product_name": "Flexible 80A Resin (1 L)",
+    "category": "Materials",
+    "price": "$199",
+    "product_url": "https://formlabs.com/products/materials/flexible-80a-resin/",
+    "source_url": "https://formlabs.com/products/materials/",
+    "product_details": "Flexible and impact-resistant photopolymer resin. Ideal for grips, gaskets, and wearables.",
+    "specifications": {
+      "Volume": "1 L",
+      "Shore Hardness": "80A",
+      "Compatible Printers": "Form 3, Form 3+, Form 4"
+    }
+  },
+  {
+    "product_name": "Form Wash L",
+    "category": "Post-Processing",
+    "price": "$699",
+    "product_url": "https://formlabs.com/products/post-processing/form-wash-l/",
+    "source_url": "https://formlabs.com/products/post-processing/",
+    "product_details": "Large-format automated wash station for Form 3L and Form 4L. Uses isopropyl alcohol to remove uncured resin.",
+    "specifications": {
+      "Tank Capacity": "23 L",
+      "Compatible Printers": "Form 3L, Form 4L"
+    }
+  }
+]

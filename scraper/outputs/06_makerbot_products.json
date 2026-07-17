@@ -1,0 +1,378 @@
+[
+  {
+    "product_name": "MakerBot METHOD XL",
+    "category": "3D Printers",
+    "subcategory": "3D Printers",
+    "price": "$6,999",
+    "product_url": "https://store.ultimaker.com/products/makerbot-method-xl",
+    "source_url": "https://store.ultimaker.com/3d-printers",
+    "specifications": {
+      "build volume": "305 x 305 x 406 mm",
+      "printer": "MakerBot METHOD XL"
+    },
+    "scraped_at": null,
+    "price_current": "$6,999",
+    "_field_confidence": {
+      "product_name": "high",
+      "category": "high",
+      "subcategory": "low",
+      "price": "high",
+      "product_url": "high",
+      "source_url": "high",
+      "specifications": "high",
+      "scraped_at": "missing",
+      "price_current": "high"
+    }
+  },
+  {
+    "product_name": "MakerBot METHOD X",
+    "category": "3D Printers",
+    "subcategory": "3D Printers",
+    "price": "$4,999",
+    "product_url": "https://store.ultimaker.com/products/makerbot-method-x",
+    "source_url": "https://store.ultimaker.com/3d-printers",
+    "specifications": {
+      "build volume": "190 x 190 x 196 mm",
+      "printer": "MakerBot METHOD X"
+    },
+    "scraped_at": null,
+    "price_current": "$4,999",
+    "_field_confidence": {
+      "product_name": "high",
+      "category": "high",
+      "subcategory": "low",
+      "price": "high",
+      "product_url": "high",
+      "source_url": "high",
+      "specifications": "high",
+      "scraped_at": "missing",
+      "price_current": "high"
+    }
+  },
+  {
+    "product_name": "MakerBot METHOD",
+    "category": "3D Printers",
+    "subcategory": "3D Printers",
+    "price": "$2,499",
+    "product_url": "https://store.ultimaker.com/products/makerbot-method",
+    "source_url": "https://store.ultimaker.com/3d-printers",
+    "specifications": {
+      "build volume": "190 x 190 x 196 mm",
+      "printer": "MakerBot METHOD"
+    },
+    "scraped_at": null,
+    "price_current": "$2,499",
+    "_field_confidence": {
+      "product_name": "high",
+      "category": "high",
+      "subcategory": "low",
+      "price": "high",
+      "product_url": "high",
+      "source_url": "high",
+      "specifications": "high",
+      "scraped_at": "missing",
+      "price_current": "high"
+    }
+  },
+  {
+    "product_name": "MakerBot SKETCH Large",
+    "category": "3D Printers",
+    "subcategory": "3D Printers",
+    "price": "$2,699",
+    "product_url": "https://store.ultimaker.com/products/makerbot-sketch-large",
+    "source_url": "https://store.ultimaker.com/3d-printers",
+    "specifications": {
+      "build volume": "295 x 195 x 195 mm",
+      "printer": "MakerBot SKETCH Large",
+      "student certification": null,
+      "educator certification": null
+    },
+    "scraped_at": null,
+    "price_current": "$2,699",
+    "_field_confidence": {
+      "product_name": "high",
+      "category": "high",
+      "subcategory": "low",
+      "price": "high",
+      "product_url": "high",
+      "source_url": "high",
+      "specifications": "high",
+      "scraped_at": "missing",
+      "price_current": "high"
+    }
+  },
+  {
+    "product_name": "MakerBot SKETCH",
+    "category": "3D Printers",
+    "subcategory": "3D Printers",
+    "price": "$1,499",
+    "product_url": "https://store.ultimaker.com/products/makerbot-sketch",
+    "source_url": "https://store.ultimaker.com/3d-printers",
+    "specifications": {
+      "build volume": "150 x 150 x 150 mm",
+      "printer": "MakerBot SKETCH",
+      "student certification": null,
+      "educator certification": null
+    },
+    "scraped_at": null,
+    "price_current": "$1,499",
+    "_field_confidence": {
+      "product_name": "high",
+      "category": "high",
+      "subcategory": "low",
+      "price": "high",
+      "product_url": "high",
+      "source_url": "high",
+      "specifications": "high",
+      "scraped_at": "missing",
+      "price_current": "high"
+    }
+  },
+  {
+    "product_name": "MakerBot SKETCH Classroom",
+    "category": "3D Printers",
+    "subcategory": "3D Printers",
+    "price": "$5,499",
+    "product_url": "https://store.ultimaker.com/products/makerbot-sketch-classroom",
+    "source_url": "https://store.ultimaker.com/3d-printers",
+    "specifications": {
+      "build volume": "150 x 150 x 150 mm",
+      "printer": "MakerBot SKETCH",
+      "student certification": null,
+      "educator certification": null
+    },
+    "scraped_at": null,
+    "price_current": "$5,499",
+    "_field_confidence": {
+      "product_name": "high",
+      "category": "high",
+      "subcategory": "low",
+      "price": "high",
+      "product_url": "high",
+      "source_url": "high",
+      "specifications": "high",
+      "scraped_at": "missing",
+      "price_current": "high"
+    }
+  },
+  {
+    "product_name": "MakerBot PLA Filament",
+    "category": "Materials",
+    "subcategory": "Materials",
+    "price": "$29",
+    "product_url": "https://store.ultimaker.com/products/makerbot-pla-filament",
+    "source_url": "https://store.ultimaker.com/3d-printer-materials",
+    "specifications": {
+      "material": "PLA",
+      "printer": "MakerBot SKETCH, MakerBot METHOD"
+    },
+    "scraped_at": null,
+    "price_current": "$29",
+    "_field_confidence": {
+      "product_name": "high",
+      "category": "high",
+      "subcategory": "low",
+      "price": "high",
+      "product_url": "high",
+      "source_url": "high",
+      "specifications": "high",
+      "scraped_at": "missing",
+      "price_current": "high"
+    }
+  },
+  {
+    "product_name": "MakerBot ABS Filament",
+    "category": "Materials",
+    "subcategory": "Materials",
+    "price": "$49",
+    "product_url": "https://store.ultimaker.com/products/makerbot-abs-filament",
+    "source_url": "https://store.ultimaker.com/3d-printer-materials",
+    "specifications": {
+      "material": "ABS",
+      "printer": "MakerBot METHOD, MakerBot METHOD X, MakerBot METHOD XL"
+    },
+    "scraped_at": null,
+    "price_current": "$49",
+    "_field_confidence": {
+      "product_name": "high",
+      "category": "high",
+      "subcategory": "low",
+      "price": "high",
+      "product_url": "high",
+      "source_url": "high",
+      "specifications": "high",
+      "scraped_at": "missing",
+      "price_current": "high"
+    }
+  },
+  {
+    "product_name": "MakerBot PETG Filament",
+    "category": "Materials",
+    "subcategory": "Materials",
+    "price": "$49",
+    "product_url": "https://store.ultimaker.com/products/makerbot-petg-filament",
+    "source_url": "https://store.ultimaker.com/3d-printer-materials",
+    "specifications": {
+      "material": "PETG",
+      "printer": "MakerBot METHOD, MakerBot METHOD X, MakerBot METHOD XL"
+    },
+    "scraped_at": null,
+    "price_current": "$49",
+    "_field_confidence": {
+      "product_name": "high",
+      "category": "high",
+      "subcategory": "low",
+      "price": "high",
+      "product_url": "high",
+      "source_url": "high",
+      "specifications": "high",
+      "scraped_at": "missing",
+      "price_current": "high"
+    }
+  },
+  {
+    "product_name": "MakerBot Nylon Carbon Fiber Filament",
+    "category": "Materials",
+    "subcategory": "Materials",
+    "price": "$149",
+    "product_url": "https://store.ultimaker.com/products/makerbot-nylon-carbon-fiber-filament",
+    "source_url": "https://store.ultimaker.com/3d-printer-materials",
+    "specifications": {
+      "material": "Nylon Carbon Fiber",
+      "printer": "MakerBot METHOD X, MakerBot METHOD XL"
+    },
+    "scraped_at": null,
+    "price_current": "$149",
+    "_field_confidence": {
+      "product_name": "high",
+      "category": "high",
+      "subcategory": "low",
+      "price": "high",
+      "product_url": "high",
+      "source_url": "high",
+      "specifications": "high",
+      "scraped_at": "missing",
+      "price_current": "high"
+    }
+  },
+  {
+    "product_name": "MakerBot METHOD Performance Extruder",
+    "category": "Extruders",
+    "subcategory": "Extruders",
+    "price": "$199",
+    "product_url": "https://store.ultimaker.com/products/makerbot-method-performance-extruder",
+    "source_url": "https://store.ultimaker.com/3d-printer-extruders-and-print-cores",
+    "specifications": {
+      "printer": "MakerBot METHOD, MakerBot METHOD X, MakerBot METHOD XL"
+    },
+    "scraped_at": null,
+    "price_current": "$199",
+    "_field_confidence": {
+      "product_name": "high",
+      "category": "high",
+      "subcategory": "low",
+      "price": "high",
+      "product_url": "high",
+      "source_url": "high",
+      "specifications": "high",
+      "scraped_at": "missing",
+      "price_current": "high"
+    }
+  },
+  {
+    "product_name": "MakerBot METHOD Extruder",
+    "category": "Extruders",
+    "subcategory": "Extruders",
+    "price": "$149",
+    "product_url": "https://store.ultimaker.com/products/makerbot-method-extruder",
+    "source_url": "https://store.ultimaker.com/3d-printer-extruders-and-print-cores",
+    "specifications": {
+      "printer": "MakerBot METHOD, MakerBot METHOD X, MakerBot METHOD XL"
+    },
+    "scraped_at": null,
+    "price_current": "$149",
+    "_field_confidence": {
+      "product_name": "high",
+      "category": "high",
+      "subcategory": "low",
+      "price": "high",
+      "product_url": "high",
+      "source_url": "high",
+      "specifications": "high",
+      "scraped_at": "missing",
+      "price_current": "high"
+    }
+  },
+  {
+    "product_name": "MakerBot SKETCH Extruder",
+    "category": "Extruders",
+    "subcategory": "Extruders",
+    "price": "$99",
+    "product_url": "https://store.ultimaker.com/products/makerbot-sketch-extruder",
+    "source_url": "https://store.ultimaker.com/3d-printer-extruders-and-print-cores",
+    "specifications": {
+      "printer": "MakerBot SKETCH, MakerBot SKETCH Large"
+    },
+    "scraped_at": null,
+    "price_current": "$99",
+    "_field_confidence": {
+      "product_name": "high",
+      "category": "high",
+      "subcategory": "low",
+      "price": "high",
+      "product_url": "high",
+      "source_url": "high",
+      "specifications": "high",
+      "scraped_at": "missing",
+      "price_current": "high"
+    }
+  },
+  {
+    "product_name": "MakerBot SKETCH Build Plate",
+    "category": "Parts & Accessories",
+    "subcategory": "Parts & Accessories",
+    "price": "$29",
+    "product_url": "https://store.ultimaker.com/products/makerbot-sketch-build-plate",
+    "source_url": "https://store.ultimaker.com/accessories",
+    "specifications": {
+      "printer": "MakerBot SKETCH"
+    },
+    "scraped_at": null,
+    "price_current": "$29",
+    "_field_confidence": {
+      "product_name": "high",
+      "category": "high",
+      "subcategory": "low",
+      "price": "high",
+      "product_url": "high",
+      "source_url": "high",
+      "specifications": "high",
+      "scraped_at": "missing",
+      "price_current": "high"
+    }
+  },
+  {
+    "product_name": "MakerBot METHOD Build Plate",
+    "category": "Parts & Accessories",
+    "subcategory": "Parts & Accessories",
+    "price": "$49",
+    "product_url": "https://store.ultimaker.com/products/makerbot-method-build-plate",
+    "source_url": "https://store.ultimaker.com/accessories",
+    "specifications": {
+      "printer": "MakerBot METHOD, MakerBot METHOD X, MakerBot METHOD XL"
+    },
+    "scraped_at": null,
+    "price_current": "$49",
+    "_field_confidence": {
+      "product_name": "high",
+      "category": "high",
+      "subcategory": "low",
+      "price": "high",
+      "product_url": "high",
+      "source_url": "high",
+      "specifications": "high",
+      "scraped_at": "missing",
+      "price_current": "high"
+    }
+  }
+]

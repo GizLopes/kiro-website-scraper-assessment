@@ -1,0 +1,48 @@
+[
+  {
+    "product_name": "UltiMaker S7 Pro Bundle",
+    "category": "S series printers",
+    "price": null,
+    "product_url": "https://ultimaker.com/3d-printers/s-series/ultimaker-s7-pro-bundle/",
+    "specifications": {},
+    "specs": [
+      {"spec_name": "Dimensions", "type": "Build volume", "spec_value": "330 × 240 × 300 mm"},
+      {"spec_name": "Dimensions", "type": "Machine dimensions", "spec_value": "495 × 585 × 780 mm"},
+      {"spec_name": "Dimensions", "type": "Net weight", "spec_value": "20.6 kg"},
+      {"spec_name": "Print settings", "type": "Layer resolution", "spec_value": "0.025 mm"},
+      {"spec_name": "Print settings", "type": "XY accuracy", "spec_value": "6.9 µm"},
+      {"spec_name": "Print settings", "type": "Max. print speed", "spec_value": "300 mm/s"},
+      {"spec_name": "Temperature", "type": "Print core temp", "spec_value": "Up to 280 °C"},
+      {"spec_name": "Temperature", "type": "Build plate temp", "spec_value": "Up to 140 °C"}
+    ]
+  },
+  {
+    "product_name": "UltiMaker S5",
+    "category": "S series printers",
+    "price": null,
+    "product_url": "https://ultimaker.com/3d-printers/s-series/ultimaker-s5/",
+    "specifications": {},
+    "specs": [
+      {"spec_name": "Dimensions", "type": "Build volume", "spec_value": "330 × 240 × 300 mm"},
+      {"spec_name": "Dimensions", "type": "Machine dimensions", "spec_value": "495 × 585 × 780 mm"},
+      {"spec_name": "Print settings", "type": "Layer resolution", "spec_value": "0.025 mm"},
+      {"spec_name": "Temperature", "type": "Print core temp", "spec_value": "Up to 280 °C"}
+    ]
+  },
+  {
+    "product_name": "UltiMaker Factor 4",
+    "category": "Factor series printers",
+    "price": null,
+    "product_url": "https://ultimaker.com/3d-printers/factor-series/ultimaker-factor-4/",
+    "specifications": {},
+    "specs": [
+      {"spec_name": "Dimensions", "type": "Build volume", "spec_value": "330 × 240 × 300 mm"},
+      {"spec_name": "Dimensions", "type": "Machine dimensions", "spec_value": "563 × 627 × 1014 mm"},
+      {"spec_name": "Dimensions", "type": "Net weight", "spec_value": "77 kg"},
+      {"spec_name": "Print settings", "type": "Layer resolution", "spec_value": "0.025 mm"},
+      {"spec_name": "Print settings", "type": "Max. print speed", "spec_value": "600 mm/s"},
+      {"spec_name": "Temperature", "type": "Print core temp", "spec_value": "Up to 340 °C"},
+      {"spec_name": "Temperature", "type": "Build plate temp", "spec_value": "Up to 145 °C"}
+    ]
+  }
+]

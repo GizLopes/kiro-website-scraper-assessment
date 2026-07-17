@@ -1,0 +1,50 @@
+site: bambulab
+base_url: "https://bambulab.com/en-us/"
+output_prefix: "07_bambulab_products"
+
+schema_fields:
+  - product_name
+  - category
+  - subcategory
+  - price
+  - product_url
+  - source_url
+  - details
+  - specifications
+
+instructions: |
+  You are extracting product data from the Bambu Lab website (US store).
+
+  NAVIGATION:
+  1. Go to base_url and accept/close any cookie banner or popup.
+  2. Scroll to the footer and find links for these top-level categories:
+       - 3D Printers   → https://us.store.bambulab.com/collections/3d-printer
+       - Filament      → https://us.store.bambulab.com/collections/bambu-lab-3d-printer-filament
+       - Accessories   → https://us.store.bambulab.com/collections/accessories
+       - Maker's Supply → https://us.store.bambulab.com/maker-supply
+       - Spare Parts   → https://us.store.bambulab.com/collections/spare-parts
+
+  3. In the Maker's Supply category, also navigate into its sub-categories:
+       Model Kits | Hardware Parts | Electronics | Tool&Others | CyberBrick
+
+  4. On each listing page, scroll to the bottom to reveal all products via
+     lazy-loading. Dismiss any popups that appear.
+
+  EXTRACTION (listing cards — do NOT open individual PDPs unless noted):
+  - product_name: The product title from the card. If the card title looks
+    like a category name or is blank, open the PDP to get the real h1 title.
+  - category: Top-level category name (e.g. "3D Printers", "Filament").
+  - subcategory: Sub-category for Maker's Supply (e.g. "Model Kits"); "Not Applicable" otherwise.
+  - price: The price shown on the card (e.g. "$1,449"). If a range, capture
+    the lower bound. Null if absent.
+  - product_url: The full URL of the product detail page (from the card link).
+  - source_url: The listing page URL currently open.
+  - details: Open the PDP only when product_name is unclear or details are
+    needed. Extract a summary from "Product Features" or "Physical Properties"
+    sections (pipe-separated if multiple bullet points). Null otherwise.
+  - specifications: Any structured key-value specs found on the PDP.
+
+  IMPORTANT:
+  - Skip cards where product_name matches a category or sub-category name.
+  - Deduplicate by (category, subcategory, product_name, price, product_url).
+  - Return a JSON array, one object per product.

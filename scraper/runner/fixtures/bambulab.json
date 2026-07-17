@@ -1,0 +1,83 @@
+[
+  {
+    "product_name": "Bambu Lab X1 Carbon",
+    "category": "3D Printers",
+    "subcategory": "Not Applicable",
+    "price": "$1,449",
+    "product_url": "https://us.store.bambulab.com/products/x1-carbon",
+    "source_url": "https://us.store.bambulab.com/collections/3d-printer",
+    "details": "Multi-material capable | Carbon fibre-reinforced frame | 256 × 256 × 256 mm build volume | 350 mm/s max speed",
+    "specifications": {
+      "Build Volume": "256 × 256 × 256 mm",
+      "Max Speed": "350 mm/s",
+      "Layer Resolution": "0.05–0.35 mm",
+      "Nozzle Temp": "≤ 300 °C",
+      "Bed Temp": "≤ 120 °C"
+    }
+  },
+  {
+    "product_name": "Bambu Lab P1S",
+    "category": "3D Printers",
+    "subcategory": "Not Applicable",
+    "price": "$699",
+    "product_url": "https://us.store.bambulab.com/products/p1s",
+    "source_url": "https://us.store.bambulab.com/collections/3d-printer",
+    "details": "Enclosed CoreXY printer | AMS compatible | 256 × 256 × 256 mm build volume",
+    "specifications": {
+      "Build Volume": "256 × 256 × 256 mm",
+      "Max Speed": "500 mm/s",
+      "Nozzle Temp": "≤ 300 °C"
+    }
+  },
+  {
+    "product_name": "Bambu Lab A1 Mini",
+    "category": "3D Printers",
+    "subcategory": "Not Applicable",
+    "price": "$299",
+    "product_url": "https://us.store.bambulab.com/products/a1-mini",
+    "source_url": "https://us.store.bambulab.com/collections/3d-printer",
+    "details": "Compact open-frame CoreXY | 180 × 180 × 180 mm build volume | Beginner-friendly",
+    "specifications": {
+      "Build Volume": "180 × 180 × 180 mm",
+      "Max Speed": "500 mm/s"
+    }
+  },
+  {
+    "product_name": "Bambu Lab PLA Basic — Black",
+    "category": "Filament",
+    "subcategory": "Not Applicable",
+    "price": "$19.99",
+    "product_url": "https://us.store.bambulab.com/products/bambu-pla-basic",
+    "source_url": "https://us.store.bambulab.com/collections/bambu-lab-3d-printer-filament",
+    "details": null,
+    "specifications": {
+      "Material": "PLA",
+      "Diameter": "1.75 mm",
+      "Net Weight": "1 kg",
+      "Printing Temp": "190–240 °C"
+    }
+  },
+  {
+    "product_name": "Bambu Lab AMS Lite",
+    "category": "Accessories",
+    "subcategory": "Not Applicable",
+    "price": "$99",
+    "product_url": "https://us.store.bambulab.com/products/ams-lite",
+    "source_url": "https://us.store.bambulab.com/collections/accessories",
+    "details": "4-slot multi-material system for A1 / A1 Mini printers",
+    "specifications": {
+      "Compatible Printers": "A1, A1 Mini",
+      "Slots": "4"
+    }
+  },
+  {
+    "product_name": "Bambu Mini Toy — Rabbit",
+    "category": "Maker's Supply",
+    "subcategory": "Model Kits",
+    "price": "$14.99",
+    "product_url": "https://us.store.bambulab.com/products/bambu-mini-toy-rabbit",
+    "source_url": "https://us.store.bambulab.com/maker-supply",
+    "details": null,
+    "specifications": {}
+  }
+]

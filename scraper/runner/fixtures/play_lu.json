@@ -1,0 +1,37 @@
+[
+  {
+    "product_name": "GAÏA V.2",
+    "category": "Apps",
+    "item_type": "app",
+    "description": "Dodge incoming projectiles by moving your body in this fast-paced reflex game.",
+    "target_age": "6+",
+    "technical_specifications": [],
+    "product_url": "youtube.com/watch?v=50Y5V_H3o3c&source_ve_path=MjE0Mjgz&embeds_referring_euri=https%3A%2F%2Fplay-lu.com%2F",
+    "specifications": {}
+  },
+  {
+    "product_name": "QUËST",
+    "category": "Apps",
+    "item_type": "app",
+    "description": "Create digital art using your hands and body as the brush in an immersive painting experience.",
+    "target_age": "All ages",
+    "technical_specifications": [],
+    "product_url": null,
+    "specifications": {}
+  },
+  {
+    "product_name": "Move",
+    "category": "Configurations",
+    "item_type": "configuration",
+    "description": "",
+    "target_age": null,
+    "technical_specifications": [
+      "360° sensor coverage",
+      "Up to 30 simultaneous players",
+      "Portable floor unit",
+      "Plug-and-play setup"
+    ],
+    "product_url": "https://play-lu.com/move/",
+    "specifications": {}
+  }
+]

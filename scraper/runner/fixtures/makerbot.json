@@ -1,0 +1,54 @@
+[
+  {
+    "product_name": "MakerBot METHOD X Carbon",
+    "category": "3D Printers",
+    "price": "$6,499 → $4,999",
+    "price_current": "$4,999",
+    "product_url": "https://store.ultimaker.com/en/product/method-x-carbon",
+    "source_url": "https://store.ultimaker.com/3d-printers",
+    "specifications": {
+      "Build Volume": "190 × 190 × 196 mm",
+      "Layer Resolution": "0.1–0.4 mm",
+      "Max Extruder Temp": "300 °C",
+      "Heated Chamber Temp": "Up to 110 °C"
+    }
+  },
+  {
+    "product_name": "MakerBot SKETCH Large",
+    "category": "3D Printers",
+    "price": "$2,499",
+    "price_current": "$2,499",
+    "product_url": "https://store.ultimaker.com/en/product/sketch-large",
+    "source_url": "https://store.ultimaker.com/3d-printers",
+    "specifications": {
+      "Build Volume": "300 × 200 × 200 mm",
+      "Layer Resolution": "0.15–0.4 mm",
+      "Max Extruder Temp": "220 °C"
+    }
+  },
+  {
+    "product_name": "MakerBot PLA Large Spool — True White",
+    "category": "Materials",
+    "price": "$49",
+    "price_current": "$49",
+    "product_url": "https://store.ultimaker.com/en/product/pla-large-spool-true-white",
+    "source_url": "https://store.ultimaker.com/3d-printer-materials",
+    "specifications": {
+      "Material": "PLA",
+      "Net Weight": "0.9 kg",
+      "Diameter": "1.75 mm"
+    }
+  },
+  {
+    "product_name": "MakerBot Smart Extruder+",
+    "category": "Extruders",
+    "price": "$199",
+    "price_current": "$199",
+    "product_url": "https://store.ultimaker.com/en/product/smart-extruder-plus",
+    "source_url": "https://store.ultimaker.com/3d-printer-extruders-and-print-cores",
+    "specifications": {
+      "Compatible Printers": "Replicator+, Replicator Z18",
+      "Nozzle Diameter": "0.4 mm"
+    }
+  }
+]

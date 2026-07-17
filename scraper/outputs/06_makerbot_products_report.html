@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extraction Report — makerbot</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 13px;
+      background: #f8f9fa;
+      color: #212529;
+      padding: 24px;
+    }
+    h1 {
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: #343a40;
+    }
+    .stats {
+      margin-bottom: 10px;
+      font-size: 13px;
+      color: #495057;
+    }
+    .legend {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 16px;
+      font-size: 12px;
+      color: #495057;
+    }
+    .swatch {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border: 1px solid #ced4da;
+      border-radius: 2px;
+      vertical-align: middle;
+    }
+    .table-wrapper {
+      overflow-x: auto;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,.12);
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background: #fff;
+    }
+    thead tr {
+      background: #343a40;
+      color: #fff;
+    }
+    th {
+      padding: 8px 10px;
+      text-align: left;
+      font-weight: 600;
+      white-space: nowrap;
+      font-size: 12px;
+      letter-spacing: .03em;
+    }
+    td {
+      padding: 6px 10px;
+      border-bottom: 1px solid #dee2e6;
+      vertical-align: top;
+      max-width: 320px;
+      overflow-wrap: break-word;
+    }
+    tbody tr:hover td {
+      filter: brightness(0.96);
+    }
+    .badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 1px 5px;
+      border-radius: 3px;
+      vertical-align: middle;
+      margin-left: 4px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .badge-low     { background:#ffc107; color:#212529; }
+    .badge-missing { background:#dc3545; color:#fff; }
+  </style>
+</head>
+<body>
+  <h1>Extraction Report — makerbot</h1>
+  <div class="stats"><strong>15</strong> products &nbsp;|&nbsp; <span style="color:#155724">105 high-confidence fields</span> &nbsp;|&nbsp; <span style="color:#856404">15 inferred fields</span> &nbsp;|&nbsp; <span style="color:#721c24">15 missing fields</span></div>
+<div class="legend"><span class="swatch" style="background:#d4edda"></span> High confidence &nbsp;<span class="swatch" style="background:#fff3cd"></span> Inferred (low confidence) &nbsp;<span class="swatch" style="background:#f8d7da"></span> Missing</div>
+<div class="table-wrapper"><table><thead><tr><th>product_name</th><th>category</th><th>subcategory</th><th>price</th><th>product_url</th><th>source_url</th><th>specifications</th><th>price_current</th></tr></thead><tbody><tr><td style="background:#d4edda; color:#155724;">MakerBot METHOD XL</td><td style="background:#d4edda; color:#155724;">3D Printers</td><td style="background:#fff3cd; color:#856404;">3D Printers <span class="badge badge-low">inferred</span></td><td style="background:#d4edda; color:#155724;">$6,999</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/products/makerbot-method-xl</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/3d-printers</td><td style="background:#d4edda; color:#155724;">{&quot;build volume&quot;: &quot;305 x 305 x 406 mm&quot;, &quot;printer&quot;: &quot;MakerBot METHOD XL&quot;}</td><td style="background:#d4edda; color:#155724;">$6,999</td></tr>
+<tr><td style="background:#d4edda; color:#155724;">MakerBot METHOD X</td><td style="background:#d4edda; color:#155724;">3D Printers</td><td style="background:#fff3cd; color:#856404;">3D Printers <span class="badge badge-low">inferred</span></td><td style="background:#d4edda; color:#155724;">$4,999</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/products/makerbot-method-x</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/3d-printers</td><td style="background:#d4edda; color:#155724;">{&quot;build volume&quot;: &quot;190 x 190 x 196 mm&quot;, &quot;printer&quot;: &quot;MakerBot METHOD X&quot;}</td><td style="background:#d4edda; color:#155724;">$4,999</td></tr>
+<tr><td style="background:#d4edda; color:#155724;">MakerBot METHOD</td><td style="background:#d4edda; color:#155724;">3D Printers</td><td style="background:#fff3cd; color:#856404;">3D Printers <span class="badge badge-low">inferred</span></td><td style="background:#d4edda; color:#155724;">$2,499</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/products/makerbot-method</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/3d-printers</td><td style="background:#d4edda; color:#155724;">{&quot;build volume&quot;: &quot;190 x 190 x 196 mm&quot;, &quot;printer&quot;: &quot;MakerBot METHOD&quot;}</td><td style="background:#d4edda; color:#155724;">$2,499</td></tr>
+<tr><td style="background:#d4edda; color:#155724;">MakerBot SKETCH Large</td><td style="background:#d4edda; color:#155724;">3D Printers</td><td style="background:#fff3cd; color:#856404;">3D Printers <span class="badge badge-low">inferred</span></td><td style="background:#d4edda; color:#155724;">$2,699</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/products/makerbot-sketch-large</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/3d-printers</td><td style="background:#d4edda; color:#155724;">{&quot;build volume&quot;: &quot;295 x 195 x 195 mm&quot;, &quot;printer&quot;: &quot;MakerBot SKETCH Large&quot;, &quot;student certification&quot;: null, &quot;educator certification&quot;: null}</td><td style="background:#d4edda; color:#155724;">$2,699</td></tr>
+<tr><td style="background:#d4edda; color:#155724;">MakerBot SKETCH</td><td style="background:#d4edda; color:#155724;">3D Printers</td><td style="background:#fff3cd; color:#856404;">3D Printers <span class="badge badge-low">inferred</span></td><td style="background:#d4edda; color:#155724;">$1,499</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/products/makerbot-sketch</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/3d-printers</td><td style="background:#d4edda; color:#155724;">{&quot;build volume&quot;: &quot;150 x 150 x 150 mm&quot;, &quot;printer&quot;: &quot;MakerBot SKETCH&quot;, &quot;student certification&quot;: null, &quot;educator certification&quot;: null}</td><td style="background:#d4edda; color:#155724;">$1,499</td></tr>
+<tr><td style="background:#d4edda; color:#155724;">MakerBot SKETCH Classroom</td><td style="background:#d4edda; color:#155724;">3D Printers</td><td style="background:#fff3cd; color:#856404;">3D Printers <span class="badge badge-low">inferred</span></td><td style="background:#d4edda; color:#155724;">$5,499</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/products/makerbot-sketch-classroom</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/3d-printers</td><td style="background:#d4edda; color:#155724;">{&quot;build volume&quot;: &quot;150 x 150 x 150 mm&quot;, &quot;printer&quot;: &quot;MakerBot SKETCH&quot;, &quot;student certification&quot;: null, &quot;educator certification&quot;: null}</td><td style="background:#d4edda; color:#155724;">$5,499</td></tr>
+<tr><td style="background:#d4edda; color:#155724;">MakerBot PLA Filament</td><td style="background:#d4edda; color:#155724;">Materials</td><td style="background:#fff3cd; color:#856404;">Materials <span class="badge badge-low">inferred</span></td><td style="background:#d4edda; color:#155724;">$29</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/products/makerbot-pla-filament</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/3d-printer-materials</td><td style="background:#d4edda; color:#155724;">{&quot;material&quot;: &quot;PLA&quot;, &quot;printer&quot;: &quot;MakerBot SKETCH, MakerBot METHOD&quot;}</td><td style="background:#d4edda; color:#155724;">$29</td></tr>
+<tr><td style="background:#d4edda; color:#155724;">MakerBot ABS Filament</td><td style="background:#d4edda; color:#155724;">Materials</td><td style="background:#fff3cd; color:#856404;">Materials <span class="badge badge-low">inferred</span></td><td style="background:#d4edda; color:#155724;">$49</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/products/makerbot-abs-filament</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/3d-printer-materials</td><td style="background:#d4edda; color:#155724;">{&quot;material&quot;: &quot;ABS&quot;, &quot;printer&quot;: &quot;MakerBot METHOD, MakerBot METHOD X, MakerBot METHOD XL&quot;}</td><td style="background:#d4edda; color:#155724;">$49</td></tr>
+<tr><td style="background:#d4edda; color:#155724;">MakerBot PETG Filament</td><td style="background:#d4edda; color:#155724;">Materials</td><td style="background:#fff3cd; color:#856404;">Materials <span class="badge badge-low">inferred</span></td><td style="background:#d4edda; color:#155724;">$49</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/products/makerbot-petg-filament</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/3d-printer-materials</td><td style="background:#d4edda; color:#155724;">{&quot;material&quot;: &quot;PETG&quot;, &quot;printer&quot;: &quot;MakerBot METHOD, MakerBot METHOD X, MakerBot METHOD XL&quot;}</td><td style="background:#d4edda; color:#155724;">$49</td></tr>
+<tr><td style="background:#d4edda; color:#155724;">MakerBot Nylon Carbon Fiber Filament</td><td style="background:#d4edda; color:#155724;">Materials</td><td style="background:#fff3cd; color:#856404;">Materials <span class="badge badge-low">inferred</span></td><td style="background:#d4edda; color:#155724;">$149</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/products/makerbot-nylon-carbon-fiber-filament</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/3d-printer-materials</td><td style="background:#d4edda; color:#155724;">{&quot;material&quot;: &quot;Nylon Carbon Fiber&quot;, &quot;printer&quot;: &quot;MakerBot METHOD X, MakerBot METHOD XL&quot;}</td><td style="background:#d4edda; color:#155724;">$149</td></tr>
+<tr><td style="background:#d4edda; color:#155724;">MakerBot METHOD Performance Extruder</td><td style="background:#d4edda; color:#155724;">Extruders</td><td style="background:#fff3cd; color:#856404;">Extruders <span class="badge badge-low">inferred</span></td><td style="background:#d4edda; color:#155724;">$199</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/products/makerbot-method-performance-extruder</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/3d-printer-extruders-and-print-cores</td><td style="background:#d4edda; color:#155724;">{&quot;printer&quot;: &quot;MakerBot METHOD, MakerBot METHOD X, MakerBot METHOD XL&quot;}</td><td style="background:#d4edda; color:#155724;">$199</td></tr>
+<tr><td style="background:#d4edda; color:#155724;">MakerBot METHOD Extruder</td><td style="background:#d4edda; color:#155724;">Extruders</td><td style="background:#fff3cd; color:#856404;">Extruders <span class="badge badge-low">inferred</span></td><td style="background:#d4edda; color:#155724;">$149</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/products/makerbot-method-extruder</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/3d-printer-extruders-and-print-cores</td><td style="background:#d4edda; color:#155724;">{&quot;printer&quot;: &quot;MakerBot METHOD, MakerBot METHOD X, MakerBot METHOD XL&quot;}</td><td style="background:#d4edda; color:#155724;">$149</td></tr>
+<tr><td style="background:#d4edda; color:#155724;">MakerBot SKETCH Extruder</td><td style="background:#d4edda; color:#155724;">Extruders</td><td style="background:#fff3cd; color:#856404;">Extruders <span class="badge badge-low">inferred</span></td><td style="background:#d4edda; color:#155724;">$99</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/products/makerbot-sketch-extruder</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/3d-printer-extruders-and-print-cores</td><td style="background:#d4edda; color:#155724;">{&quot;printer&quot;: &quot;MakerBot SKETCH, MakerBot SKETCH Large&quot;}</td><td style="background:#d4edda; color:#155724;">$99</td></tr>
+<tr><td style="background:#d4edda; color:#155724;">MakerBot SKETCH Build Plate</td><td style="background:#d4edda; color:#155724;">Parts &amp; Accessories</td><td style="background:#fff3cd; color:#856404;">Parts &amp; Accessories <span class="badge badge-low">inferred</span></td><td style="background:#d4edda; color:#155724;">$29</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/products/makerbot-sketch-build-plate</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/accessories</td><td style="background:#d4edda; color:#155724;">{&quot;printer&quot;: &quot;MakerBot SKETCH&quot;}</td><td style="background:#d4edda; color:#155724;">$29</td></tr>
+<tr><td style="background:#d4edda; color:#155724;">MakerBot METHOD Build Plate</td><td style="background:#d4edda; color:#155724;">Parts &amp; Accessories</td><td style="background:#fff3cd; color:#856404;">Parts &amp; Accessories <span class="badge badge-low">inferred</span></td><td style="background:#d4edda; color:#155724;">$49</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/products/makerbot-method-build-plate</td><td style="background:#d4edda; color:#155724;">https://store.ultimaker.com/accessories</td><td style="background:#d4edda; color:#155724;">{&quot;printer&quot;: &quot;MakerBot METHOD, MakerBot METHOD X, MakerBot METHOD XL&quot;}</td><td style="background:#d4edda; color:#155724;">$49</td></tr></tbody></table></div>
+</body>
+</html>

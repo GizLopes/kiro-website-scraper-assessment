@@ -1,0 +1,56 @@
+site: smart_tech
+base_url: "https://www.smarttech.com/products"
+output_prefix: "02_smart_tech_products"
+
+schema_fields:
+  - product_name
+  - category
+  - subcategory
+  - price
+  - product_url
+  - specifications
+  - display_size
+  - resolution
+  - touch_points
+  - connectivity
+  - operating_system
+
+instructions: |
+  You are extracting product data from the SMART Technologies products page.
+
+  NAVIGATION:
+  1. Go to base_url and accept cookies if prompted.
+  2. The products are organised by category. Navigate to each of these
+     category URLs in order:
+       - https://www.smarttech.com/education/products/interactive-displays
+       - https://www.smarttech.com/education/products/commercial-displays
+       - https://www.smarttech.com/education/products/software
+       - https://www.smarttech.com/education/products/accessories
+  3. For each category page, scroll down until find four buttons: "Interactive displays",
+  "Commercial displays", "Software" and "Accessories"
+  4. Click each button, in the sequence in each product card through the link below
+  the products start with "Explore the + product name".
+  You need to navigate in each button there are more than one product.
+  5. A page will open to each product, search by the terms like "specs" or "brochure"
+  a pdf will open, you can capture all the data about disply, interactive experience and another
+  terms about the product specs, there a lot titles in blue collor line.
+
+  EXTRACTION (on each product detail page):
+  - product_name: The main h1 product title.
+  - category: The category label from the URL segment
+    (e.g. "interactive-displays" → "Interactive Displays").
+  - subcategory: Any series or sub-group label shown on the page (null if absent).
+  - price: Price shown (null if not listed).
+  - product_url: Current page URL.
+  - specifications: All key-value pairs from "specs" or "brochure"
+    table as a JSON object.
+  - display_size: Screen diagonal size (e.g. "65\"").
+  - resolution: Display resolution (e.g. "3840 x 2160").
+  - touch_points: Number of simultaneous touch points.
+  - connectivity: Connectivity options string (USB, HDMI, Wi-Fi etc.).
+  - operating_system: Built-in OS if mentioned.
+
+  IMPORTANT:
+  - Do not follow PDF links — extract specs from the web page only.
+  - Output null for any field not present.
+  - Return a JSON array, one object per product.

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extraction Report — active_floor</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 13px;
+      background: #f8f9fa;
+      color: #212529;
+      padding: 24px;
+    }
+    h1 {
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: #343a40;
+    }
+    .stats {
+      margin-bottom: 10px;
+      font-size: 13px;
+      color: #495057;
+    }
+    .legend {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 16px;
+      font-size: 12px;
+      color: #495057;
+    }
+    .swatch {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border: 1px solid #ced4da;
+      border-radius: 2px;
+      vertical-align: middle;
+    }
+    .table-wrapper {
+      overflow-x: auto;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,.12);
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background: #fff;
+    }
+    thead tr {
+      background: #343a40;
+      color: #fff;
+    }
+    th {
+      padding: 8px 10px;
+      text-align: left;
+      font-weight: 600;
+      white-space: nowrap;
+      font-size: 12px;
+      letter-spacing: .03em;
+    }
+    td {
+      padding: 6px 10px;
+      border-bottom: 1px solid #dee2e6;
+      vertical-align: top;
+      max-width: 320px;
+      overflow-wrap: break-word;
+    }
+    tbody tr:hover td {
+      filter: brightness(0.96);
+    }
+    .badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 1px 5px;
+      border-radius: 3px;
+      vertical-align: middle;
+      margin-left: 4px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .badge-low     { background:#ffc107; color:#212529; }
+    .badge-missing { background:#dc3545; color:#fff; }
+  </style>
+</head>
+<body>
+  <h1>Extraction Report — active_floor</h1>
+  <div class="stats"><strong>5</strong> products &nbsp;|&nbsp; <span style="color:#155724">70 high-confidence fields</span> &nbsp;|&nbsp; <span style="color:#856404">10 inferred fields</span> &nbsp;|&nbsp; <span style="color:#721c24">5 missing fields</span></div>
+<div class="legend"><span class="swatch" style="background:#d4edda"></span> High confidence &nbsp;<span class="swatch" style="background:#fff3cd"></span> Inferred (low confidence) &nbsp;<span class="swatch" style="background:#f8d7da"></span> Missing</div>
+<div class="table-wrapper"><table><thead><tr><th>product_name</th><th>category</th><th>subcategory</th><th>price</th><th>product_url</th><th>source_url</th><th>specifications</th><th>height_metric</th><th>height_imperial</th><th>width_metric</th><th>width_imperial</th><th>weight_metric</th><th>weight_imperial</th><th>vinyl_size</th><th>projector</th><th>brightness</th></tr></thead><tbody><tr><td style="background:#d4edda; color:#155724;">ActiveFloor Mini</td><td style="background:#d4edda; color:#155724;">Floor</td><td style="background:#fff3cd; color:#856404;">Floor <span class="badge badge-low">inferred</span></td><td style="background:#d4edda; color:#155724;"></td><td style="background:#d4edda; color:#155724;">https://activefloor.com/interactive-spaces/</td><td style="background:#fff3cd; color:#856404;">Floor <span class="badge badge-low">inferred</span></td><td style="background:#d4edda; color:#155724;">{&quot;Projector&quot;: &quot;Short throw projector&quot;, &quot;Brightness&quot;: &quot;3200 lm&quot;, &quot;Vinyl size&quot;: &quot;200 x 150 cm&quot;, &quot;Height&quot;: &quot;220 cm / 86.6\&quot;&quot;, &quot;Width&quot;: &quot;60 cm / 23.6\&quot;&quot;, &quot;Weight&quot;: &quot;35 kg / 77 lbs&quot;, &quot;Installation&quot;: &quot;Freestanding&quot;, &quot;Power&quot;: &quot;220-240V / 50-60Hz&quot;, &quot;Cable length&quot;: &quot;5 m&quot;}</td><td style="background:#d4edda; color:#155724;">220 cm</td><td style="background:#d4edda; color:#155724;">86.6&quot;</td><td style="background:#d4edda; color:#155724;">60 cm</td><td style="background:#d4edda; color:#155724;">23.6&quot;</td><td style="background:#d4edda; color:#155724;">35 kg</td><td style="background:#d4edda; color:#155724;">77 lbs</td><td style="background:#d4edda; color:#155724;">200 x 150 cm</td><td style="background:#d4edda; color:#155724;">Short throw projector</td><td style="background:#d4edda; color:#155724;">3200 lm</td></tr>
+<tr><td style="background:#d4edda; color:#155724;">ActiveFloor Medium</td><td style="background:#d4edda; color:#155724;">Floor</td><td style="background:#fff3cd; color:#856404;">Floor <span class="badge badge-low">inferred</span></td><td style="background:#d4edda; color:#155724;"></td><td style="background:#d4edda; color:#155724;">https://activefloor.com/interactive-spaces/</td><td style="background:#fff3cd; color:#856404;">Floor <span class="badge badge-low">inferred</span></td><td style="background:#d4edda; color:#155724;">{&quot;Projector&quot;: &quot;Short throw projector&quot;, &quot;Brightness&quot;: &quot;3200 lm&quot;, &quot;Vinyl size&quot;: &quot;300 x 200 cm&quot;, &quot;Height&quot;: &quot;240 cm / 94.5\&quot;&quot;, &quot;Width&quot;: &quot;70 cm / 27.6\&quot;&quot;, &quot;Weight&quot;: &quot;45 kg / 99 lbs&quot;, &quot;Installation&quot;: &quot;Freestanding&quot;, &quot;Power&quot;: &quot;220-240V / 50-60Hz&quot;, &quot;Cable length&quot;: &quot;5 m&quot;}</td><td style="background:#d4edda; color:#155724;">240 cm</td><td style="background:#d4edda; color:#155724;">94.5&quot;</td><td style="background:#d4edda; color:#155724;">70 cm</td><td style="background:#d4edda; color:#155724;">27.6&quot;</td><td style="background:#d4edda; color:#155724;">45 kg</td><td style="background:#d4edda; color:#155724;">99 lbs</td><td style="background:#d4edda; color:#155724;">300 x 200 cm</td><td style="background:#d4edda; color:#155724;">Short throw projector</td><td style="background:#d4edda; color:#155724;">3200 lm</td></tr>
+<tr><td style="background:#d4edda; color:#155724;">ActiveFloor Large</td><td style="background:#d4edda; color:#155724;">Floor</td><td style="background:#fff3cd; color:#856404;">Floor <span class="badge badge-low">inferred</span></td><td style="background:#d4edda; color:#155724;"></td><td style="background:#d4edda; color:#155724;">https://activefloor.com/interactive-spaces/</td><td style="background:#fff3cd; color:#856404;">Floor <span class="badge badge-low">inferred</span></td><td style="background:#d4edda; color:#155724;">{&quot;Projector&quot;: &quot;Short throw projector&quot;, &quot;Brightness&quot;: &quot;4000 lm&quot;, &quot;Vinyl size&quot;: &quot;400 x 300 cm&quot;, &quot;Height&quot;: &quot;260 cm / 102.4\&quot;&quot;, &quot;Width&quot;: &quot;80 cm / 31.5\&quot;&quot;, &quot;Weight&quot;: &quot;55 kg / 121 lbs&quot;, &quot;Installation&quot;: &quot;Freestanding&quot;, &quot;Power&quot;: &quot;220-240V / 50-60Hz&quot;, &quot;Cable length&quot;: &quot;5 m&quot;}</td><td style="background:#d4edda; color:#155724;">260 cm</td><td style="background:#d4edda; color:#155724;">102.4&quot;</td><td style="background:#d4edda; color:#155724;">80 cm</td><td style="background:#d4edda; color:#155724;">31.5&quot;</td><td style="background:#d4edda; color:#155724;">55 kg</td><td style="background:#d4edda; color:#155724;">121 lbs</td><td style="background:#d4edda; color:#155724;">400 x 300 cm</td><td style="background:#d4edda; color:#155724;">Short throw projector</td><td style="background:#d4edda; color:#155724;">4000 lm</td></tr>
+<tr><td style="background:#d4edda; color:#155724;">ActiveWall</td><td style="background:#d4edda; color:#155724;">Wall</td><td style="background:#fff3cd; color:#856404;">Wall <span class="badge badge-low">inferred</span></td><td style="background:#d4edda; color:#155724;"></td><td style="background:#d4edda; color:#155724;">https://activefloor.com/interactive-spaces/</td><td style="background:#fff3cd; color:#856404;">Wall <span class="badge badge-low">inferred</span></td><td style="background:#d4edda; color:#155724;">{&quot;Projector&quot;: &quot;Short throw projector&quot;, &quot;Brightness&quot;: &quot;3200 lm&quot;, &quot;Vinyl size&quot;: &quot;200 x 150 cm&quot;, &quot;Height&quot;: &quot;180 cm / 70.9\&quot;&quot;, &quot;Width&quot;: &quot;60 cm / 23.6\&quot;&quot;, &quot;Weight&quot;: &quot;30 kg / 66 lbs&quot;, &quot;Installation&quot;: &quot;Wall mounted / Freestanding&quot;, &quot;Power&quot;: &quot;220-240V / 50-60Hz&quot;, &quot;Cable length&quot;: &quot;5 m&quot;}</td><td style="background:#d4edda; color:#155724;">180 cm</td><td style="background:#d4edda; color:#155724;">70.9&quot;</td><td style="background:#d4edda; color:#155724;">60 cm</td><td style="background:#d4edda; color:#155724;">23.6&quot;</td><td style="background:#d4edda; color:#155724;">30 kg</td><td style="background:#d4edda; color:#155724;">66 lbs</td><td style="background:#d4edda; color:#155724;">200 x 150 cm</td><td style="background:#d4edda; color:#155724;">Short throw projector</td><td style="background:#d4edda; color:#155724;">3200 lm</td></tr>
+<tr><td style="background:#d4edda; color:#155724;">ActiveTable</td><td style="background:#d4edda; color:#155724;">Table</td><td style="background:#fff3cd; color:#856404;">Table <span class="badge badge-low">inferred</span></td><td style="background:#d4edda; color:#155724;"></td><td style="background:#d4edda; color:#155724;">https://activefloor.com/interactive-spaces/</td><td style="background:#fff3cd; color:#856404;">Table <span class="badge badge-low">inferred</span></td><td style="background:#d4edda; color:#155724;">{&quot;Projector&quot;: &quot;Short throw projector&quot;, &quot;Brightness&quot;: &quot;3200 lm&quot;, &quot;Vinyl size&quot;: &quot;120 x 80 cm&quot;, &quot;Height&quot;: &quot;75 cm / 29.5\&quot;&quot;, &quot;Width&quot;: &quot;120 cm / 47.2\&quot;&quot;, &quot;Weight&quot;: &quot;40 kg / 88 lbs&quot;, &quot;Installation&quot;: &quot;Freestanding&quot;, &quot;Power&quot;: &quot;220-240V / 50-60Hz&quot;, &quot;Cable length&quot;: &quot;3 m&quot;}</td><td style="background:#d4edda; color:#155724;">75 cm</td><td style="background:#d4edda; color:#155724;">29.5&quot;</td><td style="background:#d4edda; color:#155724;">120 cm</td><td style="background:#d4edda; color:#155724;">47.2&quot;</td><td style="background:#d4edda; color:#155724;">40 kg</td><td style="background:#d4edda; color:#155724;">88 lbs</td><td style="background:#d4edda; color:#155724;">120 x 80 cm</td><td style="background:#d4edda; color:#155724;">Short throw projector</td><td style="background:#d4edda; color:#155724;">3200 lm</td></tr></tbody></table></div>
+</body>
+</html>

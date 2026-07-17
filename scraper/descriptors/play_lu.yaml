@@ -1,0 +1,50 @@
+site: play_lu
+base_url: "https://play-lu.com/"
+output_prefix: "03_play_lu_products"
+
+schema_fields:
+  - product_name
+  - category
+  - item_type
+  - description
+  - target_age
+  - technical_specifications
+  - product_url
+  - specifications
+
+instructions: |
+  You are extracting product data from the Play-Lu (Lü) website.
+  The site has two kinds of content: APPS and CONFIGURATIONS (hardware systems).
+
+  PART 1 — APPS:
+  1. Go to https://play-lu.com/applications/ and accept cookies or overlays if shown.
+  2. Scroll slowly to the bottom to let all app tiles load (the page is long, there are apps from "a" to "z").
+  3. For each app title (each has an h2/h3 title, a description paragraph,
+     and usually a "Target Age" line):
+     - product_name: The app tile (h2 or h3 text).
+     - item_type: "app" but it is into above each video on the page.
+     - description: The first substantial paragraph (20+ characters),
+       excluding the "Target Age" line itself.
+     - target_age: The age value from "Target Age: X+" or "All ages"; null if absent.
+
+  PART 2 — CONFIGURATIONS:
+  1. Go to https://play-lu.com/our-products/#system-configuration
+  2. Find all "Learn more" links inside the "System Configuration" section.
+  3. Click each link to open the configuration product page, there are three categories Uno, Duo and Move.
+  4. On each page, scroll down until to find the "Technical specifications" tab, and click on it.
+  5. Find the "Key elements" term and extract the bullet list items.
+     - product_name: Derived from the URL slug (e.g. "üno", "düo,"möve")
+       formatted as title case.
+     - item_type: "configuration"
+     - description: "" (empty)
+     - target_age: null
+     - technical_specifications: The bullet list items as a JSON array of strings.
+     - product_url: Current page URL.
+     - category: "Configurations"
+     - specifications: {}
+
+  IMPORTANT:
+  - Deduplicate: if the same app title appears twice, keep the one with the
+    longer description.
+  - Return a JSON array combining both apps and configurations.
+  - Output null / [] for absent fields — do not skip keys.

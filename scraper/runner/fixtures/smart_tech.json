@@ -1,0 +1,34 @@
+[
+  {
+    "product_name": "SMART Board MX265-V4",
+    "category": "Interactive Displays",
+    "subcategory": null,
+    "price": null,
+    "product_url": "https://www.smarttech.com/education/products/interactive-displays/smart-board-mx265-v4",
+    "source_url": "https://www.smarttech.com/education/products/interactive-displays",
+    "specifications": {
+      "Display Size": "65\"",
+      "Resolution": "3840 x 2160",
+      "Touch Points": "20"
+    },
+    "display_size": "65\"",
+    "resolution": "3840 x 2160",
+    "touch_points": "20",
+    "connectivity": "USB-C, HDMI, Wi-Fi",
+    "operating_system": "Android 11"
+  },
+  {
+    "product_name": "SMART Board 6075 Pro",
+    "category": "Interactive Displays",
+    "subcategory": null,
+    "price": null,
+    "product_url": "https://www.smarttech.com/education/products/interactive-displays/smart-board-6075-pro",
+    "source_url": "https://www.smarttech.com/education/products/interactive-displays",
+    "specifications": {},
+    "display_size": "75\"",
+    "resolution": "3840 x 2160",
+    "touch_points": "20",
+    "connectivity": "USB, HDMI 2.0",
+    "operating_system": null
+  }
+]
