@@ -1,31 +1,31 @@
 # Websites Assessment — LLM-Powered Product Scraper
 
-Pipeline de extração de dados de produtos que combina um agente LLM com controle de browser para coletar, mapear e exportar catálogos de 7 sites de tecnologia educacional que usa impressoras 3D.
+Product data extraction pipeline combining an LLM agent with browser control to collect, map, and export catalogs from 7 educational technology websites that use 3D printers.
 
 ---
 
-## Visão geral
+## Overview
 
 ```
 Prompt Builder  →  Runner (LLM/browser)  →  Schema Mapper  →  Output Builder
-     ↓                     ↓                      ↓                  ↓
-Carrega o YAML       Envia o prompt         Mapeia os dicts      Grava JSON,
-do site e monta      ao agente e           brutos p/ Pydantic    CSV e HTML
-o prompt final       recebe os dados        com confidence        por site
+     ↓                      ↓                      ↓                  ↓
+Loads site YAML        Sends prompt          Maps raw dicts     Saves JSON,
+and builds final       to agent and          to Pydantic        CSV, and HTML
+prompt                 receives data         w/ confidence      per site
 ```
 
-O pipeline é acionado por `scraper/main.py` e percorre três estágios para cada site:
+The pipeline is triggered by `scraper/main.py` and runs through three stages for each site:
 
-1. **Stage 1 — Runner**: envia o prompt de extração ao agente LLM (mock, BrowserUse ou AgentCore/Bedrock) e recebe uma lista de dicts brutos.
-2. **Stage 2 — Mapper**: mapeia cada dict ao schema Pydantic do site, anotando cada campo com um nível de confiança (`high`, `low`, `missing`).
-3. **Stage 3 — Output**: serializa os produtos mapeados em `.json`, `.csv` e `_report.html` dentro de `scraper/outputs/`.
+1. **Stage 1 — Runner**: Sends the extraction prompt to the LLM agent (mock, BrowserUse, or AgentCore/Bedrock) and receives a list of raw dicts.
+2. **Stage 2 — Mapper**: Maps each dict to the site's Pydantic schema, annotating each field with a confidence level (`high`, `low`, `missing`).
+3. **Stage 3 — Output**: Serializes the mapped products into `.json`, `.csv`, and `_report.html` inside `scraper/outputs/`.
 
 ---
 
-## Sites cobertos
+## Covered Websites
 
-| ID | Site | URL |
-|----|------|-----|
+| ID | Website | URL |
+|----|---------|-----|
 | `active_floor` | ActiveFloor | https://activefloor.com |
 | `smart_tech` | SMART Technologies | https://smarttech.com |
 | `play_lu` | Play-Lu | https://play-lu.com |
@@ -36,42 +36,42 @@ O pipeline é acionado por `scraper/main.py` e percorre três estágios para cad
 
 ---
 
-## Estrutura do projeto
+## Project Structure
 
 ```
 websites-assessment/
-└── scraper/                           # Pacote principal
-    ├── main.py                        # Entry point da CLI
-    ├── descriptors/                   # Configuração por site (YAML)
+└── scraper/                            # Main package
+    ├── main.py                         # CLI entry point
+    ├── descriptors/                    # Per-site configuration (YAML)
     │   ├── bambulab.yaml
     │   ├── formlabs.yaml
-    │   └── ... (7 arquivos)
+    │   └── ... (7 files)
     ├── schemas/
-    │   ├── core.py                   # ProductBase + FieldConfidence
-    │   └── sites.py                  # Schemas por site + SITE_SCHEMA_MAP
+    │   ├── core.py                    # ProductBase + FieldConfidence
+    │   └── sites.py                   # Per-site schemas + SITE_SCHEMA_MAP
     ├── prompts/
-    │   └── prompt_builder.py         # Carrega YAML e monta o prompt final
+    │   └── prompt_builder.py          # Loads YAML and builds the final prompt
     ├── runner/
-    │   ├── base_runner.py            # ABC BrowserAgentRunner + RunnerResult
-    │   ├── mock_runner.py            # Runner sem browser (usa fixtures JSON)
-    │   ├── browseruse_runner.py      # Runner com browser-use + Bedrock
-    │   ├── agentcore_runner.py       # Runner com Bedrock Converse API
-    │   └── fixtures/                 # Dados de teste para os 7 sites
+    │   ├── base_runner.py             # ABC BrowserAgentRunner + RunnerResult
+    │   ├── mock_runner.py             # Browserless runner (uses JSON fixtures)
+    │   ├── browseruse_runner.py       # Runner using browser-use + Bedrock
+    │   ├── agentcore_runner.py        # Runner using Bedrock Converse API
+    │   └── fixtures/                  # Test data for all 7 sites
     ├── mapper/
-    │   └── schema_mapper.py          # Mapeamento fuzzy dict → Pydantic
+    │   └── schema_mapper.py           # Fuzzy dict → Pydantic mapping
     ├── output/
-    │   └── output_builder.py         # Serialização JSON / CSV / HTML
+    │   └── output_builder.py          # JSON / CSV / HTML serialization
     ├── pipeline/
-    │   └── pipeline.py               # Orquestra os 3 estágios
-    ├── outputs/                      # Arquivos gerados (ignorados pelo git)
+    │   └── pipeline.py                # Orchestrates the 3 stages
+    ├── outputs/                        # Generated files (git-ignored)
     └── tests/
-        ├── test_pipeline.py           # Pytest suite — pipeline (136 testes)
+        ├── test_pipeline.py           # Pytest suite — pipeline (136 tests)
         ├── test_runner.py             # Pytest suite — runners
         ├── test_mapper.py             # Pytest suite — schema mapper
         ├── test_output_builder.py     # Pytest suite — output builder
         ├── test_prompt_builder.py     # Pytest suite — prompt builder
-        ├── test_schemas.py            # Pytest suite — schemas Pydantic
-        ├── run_pipeline_check.py      # Smoke script — pipeline (sem pytest)
+        ├── test_schemas.py            # Pytest suite — Pydantic schemas
+        ├── run_pipeline_check.py      # Smoke script — pipeline (no pytest)
         ├── run_runner_check.py        # Smoke script — runners
         ├── run_mapper_check.py        # Smoke script — mapper
         ├── run_output_builder_check.py
@@ -80,52 +80,52 @@ websites-assessment/
 
 ---
 
-## Como executar
+## How to Run
 
-### Pré-requisitos
+### Prerequisites
 
 ```powershell
-# Instalar dependências base (Pydantic, PyYAML, etc.)
+# Install base dependencies (Pydantic, PyYAML, etc.)
 pip install pydantic pyyaml
 ```
 
-### Executar com MockRunner (padrão — sem browser, sem API)
+### Running with MockRunner (default — no browser, no API)
 
 ```powershell
-# Todos os 7 sites
+# All 7 sites
 python scraper/main.py
 
-# Um site específico
+# A specific site
 python scraper/main.py --sites bambulab
 
-# Múltiplos sites
+# Multiple sites
 python scraper/main.py --sites bambulab formlabs ultimaker
 
-# Sem gravar arquivos (dry-run)
+# Dry-run (do not save files)
 python scraper/main.py --dry-run
 
-# Diretório de saída customizado
+# Custom output directory
 python scraper/main.py --output-dir C:\tmp\outputs
 ```
 
-O MockRunner serve dados das fixtures em `scraper/runner/fixtures/` sem abrir nenhum browser. Útil para desenvolvimento, testes e CI.
+The MockRunner serves data from fixtures in `scraper/runner/fixtures/` without opening any browser. Useful for development, testing, and CI.
 
-### Executar com BrowserUse Runner (browser real + Bedrock)
+### Running with BrowserUse Runner (real browser + Bedrock)
 
 ```powershell
 pip install "browser-use[aws]" boto3
 playwright install chromium
 
-$env:AWS_PROFILE        = "meu-perfil"
+$env:AWS_PROFILE        = "my-profile"
 $env:AWS_DEFAULT_REGION = "us-east-1"
 $env:BEDROCK_MODEL_ID   = "anthropic.claude-sonnet-4-6"
 
 python scraper/main.py --runner browseruse --sites bambulab
 ```
 
-O BrowserUseRunner abre um Chromium real controlado pelo LLM. O agente navega no site, extrai os dados e retorna um JSON array.
+The BrowserUseRunner opens a real Chromium browser controlled by the LLM. The agent navigates the site, extracts data, and returns a JSON array.
 
-### Executar com AgentCore Runner (Bedrock Converse API, sem browser)
+### Running with AgentCore Runner (Bedrock Converse API, browserless)
 
 ```powershell
 pip install boto3
@@ -137,50 +137,50 @@ $env:AWS_DEFAULT_REGION    = "us-east-1"
 python scraper/main.py --runner agentcore --sites bambulab
 ```
 
-O AgentCoreRunner chama a Bedrock Converse API diretamente (sem browser local). Envia o prompt de extração e analisa o JSON retornado pelo modelo.
+The AgentCoreRunner calls the Bedrock Converse API directly (no local browser). It sends the extraction prompt and parses the returned JSON from the model.
 
-### Opções completas da CLI
+### Full CLI Options
 
 ```
 python scraper/main.py --help
 
-  --sites SITE_ID [...]    Sites a processar (padrão: todos os 7)
+  --sites SITE_ID [...]    Sites to process (default: all 7)
   --runner {mock,browseruse,agentcore}
-  --output-dir PATH        Diretório de saída (padrão: scraper/outputs/)
-  --dry-run                Pula Stage 3 (não grava arquivos)
-  --quiet                  Suprime linhas de progresso por site
-  --llm-provider STR       Provedor LLM para browseruse: 'bedrock'
+  --output-dir PATH        Output directory (default: scraper/outputs/)
+  --dry-run                Skip Stage 3 (does not save files)
+  --quiet                  Suppress per-site progress lines
+  --llm-provider STR       LLM provider for browseruse: 'bedrock'
   --model STR              Model ID (browseruse / agentcore)
-  --headless / --no-headless  Modo headless do browser (browseruse)
+  --headless / --no-headless  Browser headless mode (browseruse)
 ```
 
 ---
 
-## Arquivos de saída
+## Output Files
 
-Para cada site, três arquivos são gerados em `scraper/outputs/`:
+For each site, three files are generated in `scraper/outputs/`:
 
-| Arquivo | Conteúdo |
-|---------|----------|
-| `07_bambulab_products.json` | Array JSON com todos os campos + metadado `_field_confidence` |
-| `07_bambulab_products.csv` | Tabela flat; campos inferidos marcados com `*`, ausentes como `N/A` |
-| `07_bambulab_products_report.html` | Tabela HTML com células coloridas por confiança |
+| File | Content |
+|------|---------|
+| `07_bambulab_products.json` | JSON array containing all fields + `_field_confidence` metadata |
+| `07_bambulab_products.csv` | Flat table; inferred fields marked with `*`, missing as `N/A` |
+| `07_bambulab_products_report.html` | HTML table with cells color-coded by confidence |
 
-**Escala de cores do HTML:**
+**HTML Color Scale:**
 
-| Cor | Significado |
-|-----|-------------|
-| 🟢 Verde | Campo extraído com correspondência exata (`high`) |
-| 🟡 Amarelo | Campo inferido por similaridade semântica (`low`) |
-| 🔴 Vermelho | Campo ausente no retorno do LLM (`missing`) |
+| Color | Meaning |
+|-------|---------|
+| 🟢 Green | Field extracted with exact match (`high`) |
+| 🟡 Yellow | Field inferred via semantic similarity (`low`) |
+| 🔴 Red | Field missing in LLM response (`missing`) |
 
 ---
 
-## Componentes em detalhe
+## Components in Detail
 
 ### Descriptors (YAML)
 
-Cada site tem um arquivo YAML em `scraper/descriptors/` com três seções:
+Each site has a YAML file in `scraper/descriptors/` with three sections:
 
 ```yaml
 site: bambulab
@@ -196,85 +196,85 @@ schema_fields:
   - specifications
 
 instructions: |
-  Instruções detalhadas de navegação e extração para o agente LLM...
+  Detailed navigation and extraction instructions for the LLM agent...
 ```
 
-O `PromptBuilder` carrega esse YAML e monta o prompt final incluindo as instruções, um JSON Schema dos campos esperados e o contrato de saída (somente JSON array).
+The `PromptBuilder` loads this YAML and builds the final prompt, including instructions, a JSON Schema of expected fields, and the output contract (JSON array only).
 
-### Schemas Pydantic
+### Pydantic Schemas
 
-`ProductBase` define os campos comuns a todos os sites. Cada site herda e adiciona campos específicos:
+`ProductBase` defines common fields across all sites. Each site inherits and adds specific fields:
 
 ```python
-# Campos base (todos os sites)
+# Base fields (all sites)
 product_name, category, subcategory, price,
 product_url, source_url, specifications, scraped_at
 
-# Exemplos de campos específicos
+# Examples of site-specific fields
 ActiveFloorProduct  → height_metric, width_metric, weight_metric, projector, brightness
 SmartTechProduct    → display_size, resolution, touch_points, connectivity
 BambulabProduct     → details
 FormlabsProduct     → product_details
-UltimakerProduct    → specs (lista de objetos {spec_name, type, spec_value})
+UltimakerProduct    → specs (list of objects {spec_name, type, spec_value})
 MakerbotProduct     → price_current
 PlayLuProduct       → item_type, description, target_age, technical_specifications
 ```
 
 ### Schema Mapper
 
-O `SchemaMapper` resolve incompatibilidades entre os nomes de chave retornados pelo LLM e os campos do schema Pydantic usando três estratégias em cascata:
+`SchemaMapper` resolves key name mismatches between LLM responses and Pydantic schema fields using three cascading strategies:
 
-1. **Correspondência exata** (case-insensitive, normalizada) → confiança `high`
-2. **Aliases explícitos** (ex.: `"cost"` → `price`, `"title"` → `product_name`) → confiança `high`
-3. **Similaridade fuzzy** via `difflib.SequenceMatcher` com threshold 0.72 → confiança `low`
+1. **Exact match** (case-insensitive, normalized) → `high` confidence
+2. **Explicit aliases** (e.g., `"cost"` → `price`, `"title"` → `product_name`) → `high` confidence
+3. **Fuzzy similarity** via `difflib.SequenceMatcher` with a 0.72 threshold → `low` confidence
 
-Se nenhuma estratégia encontrar correspondência, o campo recebe `None` e confiança `missing`.
+If no strategy finds a match, the field receives `None` and `missing` confidence.
 
 ### Runners
 
-| Runner | Uso | Dependências |
-|--------|-----|--------------|
-| `MockRunner` | Testes e CI — serve fixtures locais | Nenhuma |
-| `BrowserUseRunner` | Extração real com browser Chromium | `browser-use[aws]`, `boto3`, `playwright` |
-| `AgentCoreRunner` | Extração via Bedrock Converse API (sem browser) | `boto3` |
+| Runner | Usage | Dependencies |
+|--------|-------|--------------|
+| `MockRunner` | Testing and CI — serves local fixtures | None |
+| `BrowserUseRunner` | Real extraction with Chromium browser | `browser-use[aws]`, `boto3`, `playwright` |
+| `AgentCoreRunner` | Extraction via Bedrock Converse API (browserless) | `boto3` |
 
-Todos herdam `BrowserAgentRunner` e implementam o método `run(prompt, site) → RunnerResult`. O pipeline só fala com essa interface, permitindo trocar o runner sem alterar nenhum outro módulo.
+All inherit from `BrowserAgentRunner` and implement `run(prompt, site) → RunnerResult`. The pipeline communicates strictly with this interface, allowing runners to be swapped without modifying any other module.
 
 ---
 
-## Testes
+## Testing
 
-### Pytest (suite completa)
+### Pytest (full suite)
 
 ```powershell
-# Todos os módulos
+# All modules
 python -m pytest scraper/tests/ -v
 
-# Só o pipeline
+# Pipeline only
 python -m pytest scraper/tests/test_pipeline.py -v
 
-# Com relatório de cobertura (requer pytest-cov)
+# With coverage report (requires pytest-cov)
 python -m pytest scraper/tests/ --cov=scraper --cov-report=term-missing
 ```
 
-### Smoke scripts (sem pytest)
+### Smoke Scripts (without pytest)
 
 ```powershell
-python scraper/tests/run_pipeline_check.py      # 160 checks
+python scraper/tests/run_pipeline_check.py       # 160 checks
 python scraper/tests/run_runner_check.py
 python scraper/tests/run_mapper_check.py
 python scraper/tests/run_output_builder_check.py
 python scraper/tests/run_prompt_builder_check.py
 ```
 
-Os smoke scripts são úteis em ambientes sem pytest instalado ou para diagnóstico rápido. Saem com código 0 se tudo passou, 1 se algum check falhou.
+Smoke scripts are useful in environments without pytest installed or for quick diagnosis. They exit with code 0 if everything passes, and 1 if any check fails.
 
 ---
 
-## Variáveis de ambiente
+## Environment Variables
 
-| Variável | Usado por | Padrão |
-|----------|-----------|--------|
+| Variable | Used By | Default |
+|----------|---------|---------|
 | `BEDROCK_MODEL_ID` | AgentCoreRunner, BrowserUseRunner | `anthropic.claude-sonnet-4-6` |
 | `AWS_DEFAULT_REGION` | AgentCoreRunner, BrowserUseRunner | `us-east-1` |
 | `AWS_ACCESS_KEY_ID` | AgentCoreRunner | — |
